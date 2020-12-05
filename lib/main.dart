@@ -1,5 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'hard.dart';
+import 'easy.dart';
 
 void main() {
   return runApp(
@@ -38,7 +40,7 @@ class _dicegameState extends State<dicegame> {
             child: FlatButton(
               onPressed: (){
                 setState(() {
-                  right_images= Random().nextInt(5)+1;
+                  left_images= Random().nextInt(5)+1;
                 });
 
                 print('Value $left_images');
