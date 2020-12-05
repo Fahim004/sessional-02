@@ -22,6 +22,8 @@ class _MyAppState extends State<MyApp> {
   void initState(){
     super.initState();
     Future.delayed(Duration(seconds: 8),
+
+
           (){
         Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),
         ),
@@ -35,6 +37,10 @@ class _MyAppState extends State<MyApp> {
     return Scaffold(
       body: Center(
         child: Text("M Fahim(SP17-BC-037)"),
+        //image: new Image.asset(
+          //  'assets/myPic.jpg'),
+
+
 
 
       ),
