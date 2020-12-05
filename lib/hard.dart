@@ -12,19 +12,19 @@ void main() {
           title: Text('DiceGame'),
           backgroundColor: Colors.grey,
         ),
-        body: dicegame(),
+        body: hard(),
 
       ),
     ),
   );
 }
 
-class dicegame extends StatefulWidget {
+class hard extends StatefulWidget {
   @override
-  _dicegameState createState() => _dicegameState();
+  _hardState createState() => _hardState();
 }
 
-class _dicegameState extends State<dicegame> {
+class _hardState extends State<hard> {
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class _dicegameState extends State<dicegame> {
                 Navigator.of(context)
                     .push(
 
-                    MaterialPageRoute(builder: (context)=> easy())
+                    MaterialPageRoute(builder: (context)=> hard())
                 );
 
               },
