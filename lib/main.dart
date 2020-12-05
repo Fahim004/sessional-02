@@ -56,7 +56,7 @@ class _dicegameState extends State<dicegame> {
                 Navigator.of(context)
                     .push(
 
-                    MaterialPageRoute(builder: (context)=> soft())
+                    MaterialPageRoute(builder: (context)=> easy())
                 );
 
               },
