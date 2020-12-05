@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,11 +17,19 @@ void main() {
   );
 }
 
-class dicegame extends StatelessWidget {
+class dicegame extends StatefulWidget {
+  @override
+  _dicegameState createState() => _dicegameState();
+}
+
+class _dicegameState extends State<dicegame> {
+
+  int left_images=1;
+  int right_images=1;
   @override
   Widget build(BuildContext context) {
 
-    var images=4;
+
 
     return Center(
       child: Row(
@@ -28,19 +37,26 @@ class dicegame extends StatelessWidget {
           Expanded(
             child: FlatButton(
               onPressed: (){
-                print('Muhammad Fahim');
+                setState(() {
+                  left_images= Random().nextInt(5)+1;
+                });
+
+                print('Value $left_images');
               },
-              child: Image.asset("images/dice$images.png"),
+              child: Image.asset("images/dice$left_images.png"),
             ),
           ),
 
           Expanded(
             child: FlatButton(
               onPressed: (){
+                setState(() {
+                  left_images= Random().nextInt(5)+1;
+                });
                 print('SP17-BCS-037');
               },
               child: Image.asset(
-                  "images/dice2.png"),
+                  "images/dice$right_images.png"),
             ),
           ),
         ],
