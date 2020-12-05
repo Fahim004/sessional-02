@@ -1,13 +1,13 @@
-import 'dart:math';
-import 'package:flutter/material.dart';
 import 'hard.dart';
 import 'easy.dart';
+import 'dart:math';
+import 'package:flutter/material.dart';
 
 void main() {
   return runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         appBar: AppBar(
           title: Text('DiceGame'),
           backgroundColor: Colors.grey,
@@ -26,8 +26,6 @@ class dicegame extends StatefulWidget {
 
 class _dicegameState extends State<dicegame> {
 
-  int left_images=1;
-  int right_images=1;
   @override
   Widget build(BuildContext context) {
 
@@ -39,26 +37,30 @@ class _dicegameState extends State<dicegame> {
           Expanded(
             child: FlatButton(
               onPressed: (){
-                setState(() {
-                  left_images= Random().nextInt(5)+1;
-                });
+                Navigator.of(context)
+                    .push(
 
-                print('Value $left_images');
+                    MaterialPageRoute(builder: (context)=> hard())
+                );
+
+
               },
-              child: Image.asset("images/dice$left_images.png"),
+              child: Image.asset("images/dice1.png"),
             ),
           ),
 
           Expanded(
             child: FlatButton(
               onPressed: (){
-                setState(() {
-                  left_images= Random().nextInt(5)+1;
-                });
-                print('SP17-BCS-037');
+
+                Navigator.of(context)
+                    .push(
+
+                    MaterialPageRoute(builder: (context)=> soft())
+                );
+
               },
-              child: Image.asset(
-                  "images/dice$right_images.png"),
+              child: Image.asset("images/easy.png"),
             ),
           ),
         ],
