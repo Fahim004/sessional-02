@@ -4,20 +4,47 @@ void main() {
   return runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.green,
         appBar: AppBar(
-          title: Text('Dicee'),
-          backgroundColor: Colors.blueGrey,
+          title: Text('DiceGame'),
+          backgroundColor: Colors.grey,
         ),
-        body: DicePage(),
+        body: dicegame(),
+
       ),
     ),
   );
 }
 
-class DicePage extends StatelessWidget {
+class dicegame extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+
+    var images=4;
+
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: FlatButton(
+              onPressed: (){
+                print('Muhammad Fahim');
+              },
+              child: Image.asset("images/dice$images.png"),
+            ),
+          ),
+
+          Expanded(
+            child: FlatButton(
+              onPressed: (){
+                print('SP17-BCS-037');
+              },
+              child: Image.asset(
+                  "images/dice2.png"),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
