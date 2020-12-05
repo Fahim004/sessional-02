@@ -1,3 +1,7 @@
+import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite
+
+import java.security.GeneralSecurityException
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
