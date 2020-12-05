@@ -38,7 +38,7 @@ class _dicegameState extends State<dicegame> {
             child: FlatButton(
               onPressed: (){
                 setState(() {
-                  left_images= Random().nextInt(5)+1;
+                  right_images= Random().nextInt(5)+1;
                 });
 
                 print('Value $left_images');
